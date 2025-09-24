@@ -1,5 +1,18 @@
 # Suvit du cours "Info1"
 
+## 24/09 : Structures de contrôle
+### Structures conditionnelles
+handout : [lien](https://heig-tin-info.github.io/handout/content/control-structures.html#les-embranchements)
+- `if (condition) { ... }` : exécute le bloc si la condition est vraie
+- `if (condition) { ... } else { ... }` : exécute le premier bloc si la condition est vraie, sinon le second
+- `if (condition1) { ... } else if (condition2) { ... } else { ... }` : chaîne de conditions
+
+### printf avancé
+handout : [lien](https://heig-tin-info.github.io/handout/content/stdio.html?highlight=printf#printf)
+- `%f` : nombre flottant
+- `%.2f` : nombre flottant avec 2 décimales
+- `%.5.2f` : nombre flottant avec un total de 5 chiffres, dont 2 après la virgule (attention le . compte aussi)
+-  Avec le nombre `%2d` ou `%-2d` on peut définir une largeur minimale pour l'affichage d'un entier (ici 2 caractères). Si le nombre est plus petit, des espaces seront ajoutés à gauche ou à droite selon le signe -.
 
 ## 23/09 : Variables et types de données
 ### Les nombres et les bases
