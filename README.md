@@ -1,5 +1,26 @@
 # Suvit du cours "Info1"
 
+## 30/09 : Scanf simple
+handout : [lien](https://heig-tin-info.github.io/handout/content/stdio.html?highlight=scanf#scanf)
+cours : [slide 30](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2093596)
+
+scanf permet de lire des données depuis l'entrée standard (généralement le clavier) et de les stocker dans des variables. Voici comment l'utiliser :
+
+- le `scanf` ne tient pas compte des espaces, tabulations et retours à la ligne avant les données
+- le `&` avant le nom de la variable est nécessaire pour passer l'adresse de la variable à `scanf`
+- le format dans `scanf` doit correspondre au type de la variable
+
+```c
+#include <stdio.h>
+int main() {
+    int age;
+    float taille;
+    printf("Entrez votre âge et votre taille (en mètres) : ");
+    scanf("%d %f", &age, &taille);
+    printf("Vous avez %d ans et vous mesurez %.2f mètres.\n", age, taille);
+}
+```
+
 ## 24/09 : Structures de contrôle
 ### Structures conditionnelles
 handout : [lien](https://heig-tin-info.github.io/handout/content/control-structures.html#les-embranchements)
