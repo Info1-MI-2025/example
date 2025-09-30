@@ -1,5 +1,7 @@
 # Suvit du cours "Info1"
 
+## 7/10 : Git, saisie, contrôle
+git : [slides](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2969777)
 
 
 ## 30/09 : Scanf simple
