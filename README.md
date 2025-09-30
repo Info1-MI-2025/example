@@ -1,9 +1,14 @@
 # Suvit du cours "Info1"
 
+
+
 ## 30/09 : Scanf simple
+
 handout : [lien](https://heig-tin-info.github.io/handout/content/stdio.html?highlight=scanf#scanf)
 
 cours : [slide 30](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2093596)
+
+résumé : [lien](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2117038)
 
 scanf permet de lire des données depuis l'entrée standard (généralement le clavier) et de les stocker dans des variables. Voici comment l'utiliser :
 
