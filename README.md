@@ -1,8 +1,57 @@
 # Suvit du cours "Info1"
 
-## 7/10 : Git, saisie, contrôle
+## x/xx : Git, saisie, contrôle
 git : [slides](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2969777)
 
+
+## 07/10 : Retour scanf et arguments
+handout : [lien](https://heig-tin-info.github.io/handout/content/processus.html?highlight=argument#entrees-sorties)
+
+### SSCANF
+`sscanf` est similaire à `scanf`, mais au lieu de lire à partir de l'entrée standard, il lit à partir d'une chaîne de caractères. Voici comment l'utiliser :
+```c
+#include <stdio.h>
+int main() {
+    const char input[] = "25 1.75";
+    int age;
+    double height;
+    sscanf(input, "%d %f", &age, &height);
+    printf("Age: %d, Height: %.2f\n", age, height);
+    return 0;
+}
+```
+
+### Retour de scanf et sscanf
+Le retour de `scanf` et `sscanf` indique le nombre d'éléments correctement lus et assignés aux variables. Si le retour est différent du nombre attendu, cela signifie qu'une erreur s'est produite lors de la lecture des données.
+
+### Arguments de la ligne de commande
+Les argumnents de la ligne de commande permettent de passer des informations à un programme lors de son exécution. Voici comment les utiliser en C :
+
+Comme les arguments sont passés dans un tableau, ils seront accèssibles via un indice, en commençant par 0. Le premier argument (indice 0) est toujours le nom du programme lui-même. Le second argument (indice 1) est le premier argument passé par l'utilisateur, et ainsi de suite.
+Pour accèder à un argument spécifique, on utilise `argv[index]`, où `index` est l'indice de l'argument souhaité.
+
+```c
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+    // argc : nombre d'arguments (y compris le nom du programme)
+    // argv : tableau de chaînes de caractères contenant les arguments
+    printf("Nombre d'arguments : %d\n", argc);
+    printf("Nom du programme : %s\n", argv[0]);
+
+    int value = 0;
+    if (argc > 1) {
+        // Convertir le premier argument en entier
+        const int ret = sscanf(argv[1], "%d", &value);
+        if (ret == 1) {
+            printf("Premier argument en entier : %d\n", value);
+        } else {
+            printf("Erreur de conversion.\n");
+        }
+    } else {
+        printf("Aucun argument fourni.\n");
+    }
+}
+```
 
 ## 30/09 : Scanf simple
 
