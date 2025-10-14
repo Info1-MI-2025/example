@@ -1,7 +1,43 @@
 # Suvit du cours "Info1"
 
-## x/xx : Git, saisie, contrôle
+## 14/10 : Format et caractères
+
+**Git**
 git : [slides](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2969777)
+
+Les commandes de base pour utiliser git sont :
+- `git clone <url>` : cloner un dépôt distant
+- `git status` : vérifier l'état des fichiers dans le dépôt local
+- `git add <fichier>` : ajouter un fichier à l'index pour le prochain commit
+- `git commit -m "message"` : créer un commit avec un message descriptif
+- `git push` : envoyer les commits locaux vers le dépôt distant
+- `git pull` : récupérer les modifications du dépôt distant et les fusionner avec le dépôt
+
+**Accès à un caractère dans une chaîne de caractères**
+Pour accéder à un caractère spécifique dans une chaîne de caractères, on utilise l'indexation avec des crochets `[]`. L'indexation commence à 0, donc le premier caractère est à l'index 0, le deuxième à l'index 1, et ainsi de suite.
+
+Exemple pour accèder au premier caractère du deuxième argument de la ligne de commande :
+
+`./app -h`
+
+```c
+const char firstChar = argv[1][0]; // Accède au premier caractère du deuxième argument
+printf("Le premier caractère du deuxième argument est : %c\n", firstChar);
+```
+
+**Format `printf` avec `*`**
+
+Le format `*` dans `printf` permet de spécifier la largeur ou la précision d'un champ à partir d'une variable. Voici un exemple :
+
+```c
+#include <stdio.h>
+int main() {
+    int width = 10;
+    float value = 3.14159;
+    printf("Largeur : %*d, Précision : %.*f\n", width, 42, 2, value);
+    return 0;
+}
+```
 
 
 ## 07/10 : Retour scanf et arguments
