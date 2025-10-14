@@ -2,7 +2,7 @@
 
 ## 14/10 : Format et caractères
 
-**Git**
+### Git
 git : [slides](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2969777)
 
 Les commandes de base pour utiliser git sont :
@@ -13,7 +13,7 @@ Les commandes de base pour utiliser git sont :
 - `git push` : envoyer les commits locaux vers le dépôt distant
 - `git pull` : récupérer les modifications du dépôt distant et les fusionner avec le dépôt
 
-**Accès à un caractère dans une chaîne de caractères**
+### Accès à un caractère dans une chaîne de caractères
 Pour accéder à un caractère spécifique dans une chaîne de caractères, on utilise l'indexation avec des crochets `[]`. L'indexation commence à 0, donc le premier caractère est à l'index 0, le deuxième à l'index 1, et ainsi de suite.
 
 Exemple pour accèder au premier caractère du deuxième argument de la ligne de commande :
@@ -25,7 +25,7 @@ const char firstChar = argv[1][0]; // Accède au premier caractère du deuxième
 printf("Le premier caractère du deuxième argument est : %c\n", firstChar);
 ```
 
-**Format `printf` avec `*`**
+### Format `printf` avec `*`
 
 Le format `*` dans `printf` permet de spécifier la largeur ou la précision d'un champ à partir d'une variable. Voici un exemple :
 
