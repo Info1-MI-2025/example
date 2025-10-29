@@ -1,7 +1,40 @@
 # Suvit du cours "Info1"
 
-## 14/10 : Format et caractères
 
+## 29/10 : Les boucles
+résumé : [lien](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2117038)
+
+handout : [lien](https://heig-tin-info.github.io/handout/content/processus.html)
+
+### Boucle while
+La boucle `while` permet d'exécuter un bloc de code tant qu'une condition est vraie. On l'utilise lorsque le nombre d'itérations n'est pas connu à l'avance.
+
+```c
+  while (count < 5) {
+      printf("Count: %d\n", count);
+      count++;
+  }
+```
+
+### Boucle do...while
+La boucle `do...while` est similaire à la boucle `while`, mais elle garantit que le bloc de code est exécuté au moins une fois avant de vérifier la condition.
+
+### Boucle for
+La boucle `for` est utilisée lorsque le nombre d'itérations est connu à l'avance. Elle combine l'initialisation, la condition et l'incrémentation en une seule ligne.
+```c
+  for (int i = 0; i < 5; i++) {
+      printf("i: %d\n", i);
+  }
+```
+
+### Break
+L'instruction `break` permet de sortir immédiatement d'une boucle.
+
+### Continue
+L'instruction `continue` permet de sauter l'itération courante d'une boucle et de passer à l'itération suivante.
+
+
+## 14/10 : Format et caractères
 ### Git
 git : [slides](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2969777)
 
