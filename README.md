@@ -1,5 +1,29 @@
 # Suvit du cours "Info1"
 
+## 11.11 : Fonctions
+résumé : [lien](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2117038)
+
+handout : [lien](https://heig-tin-info.github.io/handout/content/functions.html#fonctions)
+
+Une fonction en C est un bloc de code réutilisable qui effectue une tâche spécifique. Elle permet de structurer le code, de le rendre plus lisible et de faciliter la maintenance.
+
+Elle permet de diviser un programme en sous-parties logiques, chacune responsable d'une tâche particulière. Cela améliore la lisibilité du code et facilite la collaboration entre plusieurs développeurs.
+Elle permet aussi de réutiliser du code, évitant ainsi la duplication.
+
+### Définition d'une fonction
+Pour définir une fonction en C, on utilise la syntaxe suivante :
+```c
+type_de_retour nom_de_fonction(parametres) {
+    // Corps de la fonction
+}
+``` 
+
+Exemple de fonction qui calcule la somme de deux entiers :
+```c
+int addition(int a, int b) {
+    return a + b;
+}
+```
 
 ## 29/10 : Les boucles
 résumé : [lien](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2117038)
