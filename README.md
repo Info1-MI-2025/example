@@ -1,5 +1,34 @@
 # Suvit du cours "Info1"
 
+## 18.11 : Ternaire et tableaux
+Slides : [lien](https://cyberlearn.hes-so.ch/pluginfile.php/4156769/mod_resource/content/0/info1-tableau.pdf)
+
+Handout : [lien](https://heig-tin-info.github.io/handout/content/composite-datatypes.html#tableaux)
+
+### Ternaire
+Le ternaire est une expression conditionnelle qui permet d'écrire des conditions de manière concise. La syntaxe est la suivante :
+
+```c
+condition ? expression_si_vrai : expression_si_faux;
+```
+
+Exemple :
+```c
+int a = 10;
+int b = 20;
+int max = (a > b) ? a : b; // max sera égal à 20
+```
+
+### Tableaux
+Un tableau est une structure de données qui permet de stocker plusieurs valeurs du même type sous un même nom. La syntaxe pour déclarer un tableau est la suivante :
+```c
+type nom_tableau[taille];
+```
+
+** Attention ** Les tableaux en C ont une taille fixe et ne peuvent pas être redimensionnés après leur déclaration.
+
+Le premier élément d'un tableau est accessible à l'index 0, le deuxième à l'index 1, et ainsi de suite.
+
 ## 11.11 : Fonctions
 résumé : [lien](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=2117038)
 
