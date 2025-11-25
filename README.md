@@ -1,5 +1,50 @@
 # Suvit du cours "Info1"
 
+## 25.11 : Chaînes de caractères
+Handout : [lien](https://heig-tin-info.github.io/handout/content/composite-datatypes.html#chaines-de-caracteres)
+
+Une chaîne de caractères en C est un tableau de caractères terminé par un caractère nul (`'\0'`). Voici comment déclarer et initialiser une chaîne de caractères :
+
+```c
+char str[20] = "Bonjour";
+```
+
+On peut accéder aux caractères individuels d'une chaîne en utilisant des indices, où le premier caractère est à l'indice 0.
+```c
+char firstChar = str[0]; // 'B'
+```
+
+On peut également utiliser des fonctions de la bibliothèque standard `<string.h>` pour manipuler les chaînes de caractères, telles que `strlen`, `strcpy`, `strcat`, et `strcmp`.
+
+Exempe pour trouver la longueur d'une chaîne de caractères :
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[20] = "Bonjour";
+    printf("La longueur de la chaîne est : %lu\n", strlen(str));
+    return 0;
+}
+
+```
+
+Pour parcourir une chaîne de caractères, on peut utiliser une boucle `for` ou `while` jusqu'à ce que le caractère nul soit rencontré.
+
+Exemple de parcours d'une chaîne de caractères :
+```c
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[20] = "Bonjour";
+    for (int i = 0; str[i] != '\0'; i++) {
+        printf("Caractère %d : %c\n", i, str[i]);
+    }
+    return 0;
+}
+```
+
+
 ## 18.11 : Ternaire et tableaux
 Slides : [lien](https://cyberlearn.hes-so.ch/pluginfile.php/4156769/mod_resource/content/0/info1-tableau.pdf)
 
