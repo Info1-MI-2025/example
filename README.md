@@ -1,5 +1,34 @@
 # Suvit du cours "Info1"
 
+## 06.01.26 : Passage par référence
+Slides : [lien](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=3164079)
+
+Le passage par référence permet à une fonction de modifier directement la valeur d'une variable définie en dehors de cette fonction. En C, cela se fait en passant l'adresse de la variable à la fonction à l'aide d'un pointeur.
+
+Les opérateurs utilisés pour le passage par référence sont :
+- `&` : opérateur d'adresse, utilisé pour obtenir l'adresse d'une variable.
+- `*` : opérateur de déférencement, utilisé pour accéder à la valeur pointée par un pointeur.
+- `int*` : type de pointeur vers un entier.
+
+
+```c
+#include <stdio.h>
+void increment(int *value) {
+    (*value)++; // Déférencement du pointeur pour modifier la valeur
+}
+
+int main() {
+    int num = 5;
+    printf("Avant l'incrémentation : %d\n", num);
+    increment(&num); // Passage de l'adresse de num
+    printf("Après l'incrémentation : %d\n", num);
+    return 0;
+}
+```
+
+Dans cet exemple, la fonction `increment` prend un pointeur vers un entier en paramètre. En utilisant l'opérateur de déférencement `*`, elle incrémente la valeur de l'entier pointé. Dans la fonction `main`, nous passons l'adresse de la variable `num` à la fonction `increment` en utilisant l'opérateur d'adresse `&`. Ainsi, la valeur de `num` est modifiée directement dans la fonction `increment`.
+
+
 ## 25.11 : Chaînes de caractères
 Handout : [lien](https://heig-tin-info.github.io/handout/content/composite-datatypes.html#chaines-de-caracteres)
 
