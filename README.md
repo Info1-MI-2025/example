@@ -1,5 +1,52 @@
 # Suvit du cours "Info1"
 
+## 20.01.26 : Les opérateurs bits à bits
+Handout : [lien](https://heig-tin-info.github.io/handout/content/operators.html#operateurs-bit-a-bit)
+
+Les opérateurs bit à bit travaillent directement sur les bits d’un nombre (0 et 1), et non sur le nombre entier comme les opérateurs classiques (+, -, *, etc.).
+
+> Par convention, le bit le moins significatif (LSB) est le bit #0, le suivant est le bit #1, et ainsi de suite.
+
+Voici les principaux opérateurs bit à bit en C :
+- `&` (ET bit à bit) : compare chaque bit de deux nombres et retourne 1 si les deux bits sont 1, sinon retourne 0.
+- `|` (OU bit à bit) : compare chaque bit de deux nombres et retourne 1 si au moins un des bits est 1, sinon retourne 0.
+- `^` (OU exclusif bit à bit) : compare chaque bit de deux nombres et retourne 1 si les bits sont différents, sinon retourne 0.
+- `~` (NON bit à bit) : inverse tous les bits d’un nombre (0 devient 1 et 1 devient 0).
+- `<<` (décalage à gauche) : décale les bits d’un nombre vers la gauche d’un nombre spécifié de positions, ajoutant des zéros à droite.
+- `>>` (décalage à droite) : décale les bits d’un nombre vers la droite d’un nombre spécifié de positions, ajoutant des zéros à gauche (pour les nombres non signés)
+
+Exemple d'utilisation des opérateurs bit à bit en C :
+```c
+5 & 3   // 0101 & 0011 = 0001 → 1
+
+5 | 3   // 0101 | 0011 = 0111 → 7
+
+5 ^ 3   // 0101 ^ 0011 = 0110 → 6
+
+~5      // ~0101 = 1010 → -6 (en complément à deux)
+
+5 << 1  // 0101 << 1 = 1010 → 10
+
+5 >> 1  // 0101 >> 1 = 0010 → 2
+```
+
+Pour mettre à `1` les bits `#0` et `#2` d'un entier `num`, on peut utiliser l'opérateur `|` avec un masque binaire :
+```c
+num = num | 0x5; // Met les bits #0 et #2 à 1
+```
+
+Pour mettre à `0` les bits `#1` et `#3 d'un entier `num`, on peut utiliser l'opérateur `&` avec un masque binaire inversé :
+```c
+num = num & ~0xA; // Met les bits #1 et #3 à 0
+```
+
+Pour tester si le bit `#3` d'un entier `num` est à `1`, on peut utiliser l'opérateur `&` avec un masque binaire :
+```c
+if (num & 0x8) {
+    // Le bit #3 est à 1
+}
+```
+
 ## 06.01.26 : Passage par référence
 Slides : [lien](https://cyberlearn.hes-so.ch/mod/resource/view.php?id=3164079)
 
