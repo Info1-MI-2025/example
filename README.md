@@ -42,7 +42,7 @@ num = num & ~0xA; // Met les bits #1 et #3 à 0
 
 Pour tester si le bit `#3` d'un entier `num` est à `1`, on peut utiliser l'opérateur `&` avec un masque binaire :
 ```c
-if (num & 0x8) {
+if (num & 0x8 == 0x8) {
     // Le bit #3 est à 1
 }
 ```
